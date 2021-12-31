@@ -3,7 +3,9 @@
 
 int main()
 {
-    std::cout << "Hello World!" << std::endl;
-    Utility::Display("hello");
+    if (Utility::IsDebug())
+        std::cout << "Program is launched in debug." << std::endl;
+    
+    Utility::Display("Main Start");
     return 0;
 }
