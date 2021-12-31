@@ -7,4 +7,13 @@ namespace Utility
     {
         std::cout << arg << std::endl;
     }
+
+    bool IsDebug()
+    {
+        #ifdef _DEBUG
+            return true;
+        #else
+            return false;
+        #endif
+    }
 }
