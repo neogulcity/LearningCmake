@@ -1,12 +1,8 @@
 # LearningCmake
  Basic learning cmake.
 
-#
-
 ## Requirements
 * [CMake](https://cmake.org/)
-
-#
 
 ## Building
 ```
