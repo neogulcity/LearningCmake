@@ -1,3 +1,0 @@
-C:/Dev/LearningCmake/build/CMakeFiles/LearningCmake.dir
-C:/Dev/LearningCmake/build/CMakeFiles/ALL_BUILD.dir
-C:/Dev/LearningCmake/build/CMakeFiles/ZERO_CHECK.dir
