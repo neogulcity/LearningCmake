@@ -12,11 +12,20 @@ project(
 # Set variable 'srcPath' to ./src
 set(srcPath ${CMAKE_SOURCE_DIR}/src)
 
+add_subdirectory(spdlog)
+
 # Make executable files.
 add_executable(
     ${PROJECT_NAME}
     ${srcPath}/main.cpp
     ${srcPath}/Utility.cpp
+)
+
+# Link spdlog.
+target_link_libraries(
+	${PROJECT_NAME}
+	PRIVATE
+	spdlog::spdlog_header_only
 )
 
 # Set start project for Visual Studio.

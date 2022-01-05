@@ -2,6 +2,6 @@
 
 namespace Utility
 {
-    void Display(std::string arg);
+    // Return curent build process is in debug or not.
     bool IsDebug();
 }
