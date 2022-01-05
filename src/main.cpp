@@ -4,11 +4,13 @@
 
 int main()
 {
-    if (Utility::IsDebug())
-        std::cout << "Program is launched in debug." << std::endl;
-    
-    spdlog::set_level(spdlog::level::debug);
-    SPDLOG_DEBUG("Some debug message");
+    if (Utility::IsDebug()) {
+        spdlog::set_level(spdlog::level::debug);
+        spdlog::debug("Program is launched in debug.");
+    }
+ 
+    std::string msg = "Hello World!";
+    spdlog::debug("{}", msg);
 
     return 0;
 }
