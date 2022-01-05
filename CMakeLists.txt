@@ -12,7 +12,7 @@ project(
 # Set variable 'srcPath' to ./src
 set(srcPath ${CMAKE_SOURCE_DIR}/src)
 
-add_subdirectory(spdlog)
+find_package(spdlog CONFIG REQUIRED)
 
 # Make executable files.
 add_executable(
