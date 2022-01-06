@@ -8,7 +8,7 @@ int main()
         spdlog::set_level(spdlog::level::debug);
         spdlog::debug("Program is launched in debug.");
     }
- 
+    
     std::string msg = "Hello World!";
     spdlog::debug("{}", msg);
 
