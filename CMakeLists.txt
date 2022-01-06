@@ -12,7 +12,24 @@ project(
 # Set variable 'srcPath' to ./src
 set(srcPath ${CMAKE_SOURCE_DIR}/src)
 
+# Find spdlog.
 find_package(spdlog CONFIG REQUIRED)
+
+# Checking build type
+if (CMAKE_BUILD_TYPE STREQUAL "")
+    # Build type is not set.
+    message(STATUS "Build type was unspecified, set to Release")
+    set(CMAKE_BUILD_TYPE Release)
+else ()
+    message(STATUS "Build type specified as '${CMAKE_BUILD_TYPE}'")
+endif ()
+
+# Making debug definition.
+if (${CMAKE_BUILD_TYPE} STREQUAL Debug)
+    set_directory_properties(PROPERTIES COMPILE_DEFINITIONS "_DEBUG")
+else ()
+    set_directory_properties(PROPERTIES COMPILE_DEFINITIONS "NDEBUG")
+endif ()
 
 # Make executable files.
 add_executable(
