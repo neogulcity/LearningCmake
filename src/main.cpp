@@ -1,7 +1,7 @@
 #include <fstream>
 #include "Utility.h"
 #include "spdlog/spdlog.h"
-#include "iniparser.h"
+#include "iniparser/iniparser.h"
 
 int main()
 {
@@ -11,8 +11,9 @@ int main()
     }
 
     spdlog::debug("Hello World!");
-    ini::ini abc("test2.ini");
+    ini::ini abc("test.ini");
     auto var = abc.get("[Settings]", "bUse", "true");
     spdlog::debug("{}", var);
+    
     return 0;
 }
