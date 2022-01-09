@@ -12,8 +12,9 @@ project(
 # Set variable 'srcPath' to ./src
 set(srcPath ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
-# Find spdlog.
+# Find packages.
 find_package(spdlog CONFIG REQUIRED)
+find_package(iniparser CONFIG REQUIRED)
 
 # Checking build type
 if (CMAKE_BUILD_TYPE STREQUAL "")
@@ -31,8 +32,6 @@ else ()
     set_directory_properties(PROPERTIES COMPILE_DEFINITIONS "NDEBUG")
 endif ()
 
-add_subdirectory(extern/iniparser)
-
 # Make executable files.
 add_executable(
     ${PROJECT_NAME}
@@ -45,7 +44,7 @@ target_link_libraries(
 	${PROJECT_NAME}
 	PRIVATE
 	spdlog::spdlog_header_only
-    iniparser
+    iniparser::iniparser
 )
 
 # Set start project for Visual Studio.
