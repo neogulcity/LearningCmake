@@ -1,3 +1,0 @@
-[submodule "extern/iniparser"]
-	path = extern/iniparser
-	url = https://github.com/neogulcity/iniparser
