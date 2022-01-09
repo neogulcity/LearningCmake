@@ -3,7 +3,8 @@
 
 ## Requirements
 * [CMake](https://cmake.org/)
- * [spdlog](https://github.com/gabime/spdlog/)
+* [spdlog](https://github.com/gabime/spdlog/)
+* [iniparser](https://github.com/neogulcity/iniparser)
 
 ## Building
 ```
